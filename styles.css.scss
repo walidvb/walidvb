@@ -1,0 +1,59 @@
+$mobile: "(max-width:767px)";
+$portrait: "(orientation:portrait)";
+$landscape: "(orientation:landscape)";
+$xs: $mobile;
+$tablet: "(min-width:767px)";
+$sm: $tablet;
+$md: "(min-width:991px)";
+$lg: "(min-width:1200px)";
+
+body{
+	color: #111111;
+	font-family: 'Helvetica Neue', sans-serif;
+}
+
+.container{
+	max-width: 100%;
+	margin: auto;
+	padding-top: 20px;
+	@media #{$tablet}
+	{
+		padding-top: 80px;
+	  max-width: 700px;
+	}
+	a{
+		color: #111111;
+		padding: 0 5px;
+		transition: all 0.1s;
+		@media #{$mobile}
+		{
+		  background: white;
+			color: #111111;
+			text-decoration: none;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+	p:hover a, .touch & a, .show{
+		background: white;
+		color: #111111;
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	span{
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		background: #111111;
+	}
+	.logo{
+		display: inline-block;
+		padding: 0 15px;
+	}
+}
+
+img{
+	max-width: 100%;
+}
